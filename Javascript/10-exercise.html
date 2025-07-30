@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise</title>
+  <style>
+    .button-amazon{
+      background-color: rgb(255, 216, 20);
+      color: black;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 10px 60px;
+      border: none;
+      font-size: medium;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    .button-request{
+      background-color: black;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: medium;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 30px;
+      margin-left: 20px;
+    }
+
+    .button-schedule{
+      background-color:  rgb(230, 230,230);
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 10px 20px;
+      border: none;
+      font-weight:600;
+      margin-left: 20px;
+      border-radius: 5px;
+
+    }
+
+    .gaming{
+      background-color: rgb(230, 230,230);
+      border: none;
+      font-size: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .is-gaming{
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
+
+    .js-input{
+      padding: 5px;
+    }
+
+    .js-calculate{
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 7px;
+    }
+
+    .error-message{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <button class="button-amazon">Add to Cart</button>
+  <button class="button-request">Request now</button>
+  <button class="button-schedule">Schedule for later</button>
+  <button class="js-button text" onclick="
+    const button =document.querySelector('.js-button');
+    console.log( classList.contains('.js-button'));
+  ">Text</button><br>
+  <button class="js-gaming gaming" onclick="
+   toggle();
+  " >Gaming </button>
+  <button class="js-music gaming" onclick="
+    toggle1();
+  ">Music</button>
+  <button class="js-tech gaming" onclick="toggle2();">Tech</button>
+
+  <input type="text" class="js-input">
+  <button class="js-calculate" onclick="
+    calculateTotal();
+  ">Calculate</button>
+  <p class="total"></p>
+  <p class="error-message"></p>
+  <script>
+    function toggle(){
+    const button= document.querySelector('.js-gaming');
+    if(!button.classList.contains('is-gaming')){
+
+    button.classList.add('is-gaming');
+    }
+    else{
+      button.classList.remove('is-gaming');
+    }
+  }
+
+  function toggle1(){
+    const button= document.querySelector('.js-music');
+    if(!button.classList.contains('is-gaming')){
+      button.classList.add('is-gaming');
+    }
+    else{
+      button.classList.remove('is-gaming');
+    }
+  }
+
+  function toggle2(){
+    const button= document.querySelector('.js-tech');
+    if(!button.classList.contains('is-gaming')){
+      button.classList.add('is-gaming');
+    }
+    else{
+      button.classList.remove('is-gaming');
+    } 
+    
+  }
+
+  calculateTotal()
+  {
+    const inputElement= document.querySelector('.js-input');
+    let cost =Number(inputElement);
+    if(cost>0){
+      cost=cost+10;
+      document.querySelector('.total').innerHTML=`${inputElement.value}`;
+    }
+    else{
+      document.querySelector('.error-message').innerHTML='Error cost cannot be less than $0.'
+    }
+  }
+
+
+    const buttonElement= document.querySelector('.js-button');
+    console.log(buttonElement.classList.contains('.js-button'));
+  </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise</title>
+</head>
+<body>
+  <button class="js-button" onclick="
+      updateButton();
+    ">start</button>
+
+    <button class="js-add-button" onclick="
+      updateAddButton();
+    ">Add to Cart</button>
+    <p class="js-message"></p>
+
+    <button  onclick="
+      number++;
+      pop();
+    ">Add</button>
+    <button onclick="
+      if(number >0){
+        number--;
+      }
+      else{
+        document.title == 'App';
+      }
+      pop();
+    ">Remove</button>
+  <script>
+    /*let add= function(){
+      console.log(2+3);
+    };
+
+    add();
+    add();
+
+    function runTwice(fun){
+      fun();
+      fun();
+    }
+
+    runTwice(function(){
+      console.log('12b');
+    });
+
+    function updateButton(){
+      const button = document.querySelector('.js-button');
+
+      button.innerHTML ='Loading...';
+      setTimeout(function(){
+        button.innerHTML='Finished!';
+      }, 1000);
+    }
+
+    let timeoutId;
+
+    function updateAddButton(){
+      const button = document.querySelector('.js-message');
+
+      button.innerHTML=`Added`;
+
+      clearTimeout(timeoutId);
+      timeoutId =setTimeout(function(){
+        button.innerHTML='';
+      }, 2000);
+    }
+
+    let number=0;
+    function pop(){
+    setInterval(function() {
+      if(document.title == 'App'){
+        document.title = `${number} New messages`;
+      }else{
+        document.title = 'App';
+      }
+    },1000);
+  }*/
+
+const regularFunction = function(param, param2){
+  console.log('hello');
+  return 5;
+}
+
+const arrowFunction = (param, param2) =>
+  {
+    console.log('hello');
+    return 5;
+  };
+  arrowFunction();
+  const oneParam =(param) =>{
+    console.log(param+1);
+  };
+  oneParam(2);
+
+  const oneLine =() => 2+3;
+  console.log(oneLine());
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>9a</button>
+  <button class="js-9b-button">9b</button>
+  <button onclick="document.querySelector('.js-message').innerHTML='you choose: heads'">heads</button>
+  <button onclick="document.querySelector('.js-message').innerHTML='you choose: tails'">tails</button>
+  <input type="text" class="js-name-input" onkeydown="
+    if(event.key === 'Enter'){
+      const inputElement= document.querySelector('.js-name-input');
+    document.querySelector('.js-message').innerHTML=`Your name is: ${inputElement.value}` ;
+    }
+  ">
+  <button onclick="submit();">Submit</button>
+  <p class="js-message"></p>
+  <script>console.log(document.querySelector('button'));
+    document.querySelector('.js-9b-button').innerHTML='9b done!';
+
+    function submit(){
+      const inputElement= document.querySelector('.js-name-input');
+      document.querySelector('.js-message').innerHTML=`Your name is: ${inputElement.value}` ;
+    }
+
+  </script>
+</body>
+</html>

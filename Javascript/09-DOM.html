@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>9a</button>
+  <button class="btn-9b" onclick="
+    document.querySelector('.btn-9b').innerHTML=('9b done!');
+  ">9b</button>
+  <button onclick="document.querySelector('.js-choose')
+  .innerHTML=('you choose: Heads')">Heads</button>
+  <button onclick="document.querySelector('.js-choose')
+  .innerHTML=('you choose: Tails')">Tails </button>
+  <input type="text" class="js-input" onkeyup="
+    enter();
+  ">
+  <button onclick="
+  const inputElement= document.querySelector('.js-input');
+  document.querySelector('.js-choose')
+  .innerHTML=(`your name is: ${inputElement.value}`)" >Submit</button>
+  <p class="js-choose"></p>
+</body>
+  <script>
+    console.log(document.querySelector('button'));
+    function enter(){
+      const inputElement= document.querySelector('.js-input');
+    document.querySelector('.js-choose')
+    .innerHTML=`${inputElement.value}`;
+    }
+    
+    
+  </script>
+</body>
+</html>
